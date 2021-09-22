@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de grupo en Coderhouse</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center shadow-lg p-3 mb-5 bg-body rounded">
+        <div>
+            <h1>Sala de chat</h1>
+        </div>
+    </div>
+    <div id="mensajes"></div>
+    <br>
+    <div class="d-flex justify-content-start">
+        <form onsubmit="return envioMensaje(this)">
+            <div class="p-2 bg-primary"><input type="text" placeholder="Ingrese su nombre:" id="nombre"></div>
+            <div class="p-2 bg-primary"><input type="text" placeholder="Ingrese su mensaje..." id="mensaje"></div>
+            <div class="p-2"><input class="btn btn-primary" type="button" value="Enviar"></div>
+        </form>
+    </div>
+</body>
+
+</html>
